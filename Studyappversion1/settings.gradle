@@ -1,0 +1,3 @@
+include ':javaDevelopment'
+include ':app'
+rootProject.name = "Study app version 1"

@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="156eb3dc-5e82-4f2d-b4a0-b5d17a5a47d4" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1o3QUH4aM8U6UaR52JJA2GIR5lS" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../javaprocesses" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.17" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="?" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Shell Script.Unnamed">
+    <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="My_Application_2.app" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="helloWorld" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.myapplication2.helloWorld" />
+      <module name="My_Application_2.app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.myapplication2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="myHelloWorld2" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.example.myapplication2.myHelloWorld2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.myapplication2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Unnamed" type="ShConfigurationType" nameIsGenerated="true">
+      <option name="INDEPENDENT_SCRIPT_PATH" value="false" />
+      <option name="SCRIPT_PATH" value="$USER_HOME$/Desktop/java test.java" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+      <option name="INTERPRETER_PATH" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Android App.app" />
+      <item itemvalue="Application.helloWorld" />
+      <item itemvalue="Application.myHelloWorld2" />
+      <item itemvalue="Shell Script.Unnamed" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="156eb3dc-5e82-4f2d-b4a0-b5d17a5a47d4" name="Default Changelist" comment="" />
+      <created>1612512807222</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1612512807222</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2277" y="251" key="#PSD" timestamp="1612512908739">
+      <screen x="1920" y="0" width="1680" height="1010" />
+    </state>
+    <state x="2277" y="251" key="#PSD/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1612512908739" />
+    <state x="587" y="154" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1612516536334">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="587" y="154" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1612516536334" />
+    <state x="735" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1612516479818">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="735" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1612516479818" />
+    <state x="689" y="309" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1612513954539">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="689" y="309" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1612513954539" />
+    <state x="891" y="41" key="#myHelloWorld" timestamp="1612513925011">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="891" y="41" key="#myHelloWorld/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1612513925011" />
+    <state x="657" y="123" key="#myHelloWorld2" timestamp="1612515143006">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="657" y="123" key="#myHelloWorld2/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1612515143006" />
+    <state x="659" y="276" key="FileChooserDialogImpl" timestamp="1612516952843">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="659" y="276" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1612516952843" />
+    <state x="2497" y="268" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1612516192395" />
+    <state width="1637" height="271" key="GridCell.Tab.0.bottom" timestamp="1612513522902">
+      <screen x="1920" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1637" height="271" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1612513522902" />
+    <state width="1637" height="271" key="GridCell.Tab.0.center" timestamp="1612513522902">
+      <screen x="1920" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1637" height="271" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1612513522902" />
+    <state width="1637" height="271" key="GridCell.Tab.0.left" timestamp="1612513522902">
+      <screen x="1920" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1637" height="271" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1612513522902" />
+    <state width="1637" height="271" key="GridCell.Tab.0.right" timestamp="1612513522902">
+      <screen x="1920" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1637" height="271" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1612513522902" />
+    <state width="1637" height="271" key="GridCell.Tab.1.bottom" timestamp="1612513522902">
+      <screen x="1920" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1637" height="271" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1612513522902" />
+    <state width="1637" height="271" key="GridCell.Tab.1.center" timestamp="1612513522902">
+      <screen x="1920" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1637" height="271" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1612513522902" />
+    <state width="1637" height="271" key="GridCell.Tab.1.left" timestamp="1612513522902">
+      <screen x="1920" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1637" height="271" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1612513522902" />
+    <state width="1637" height="271" key="GridCell.Tab.1.right" timestamp="1612513522902">
+      <screen x="1920" y="0" width="1680" height="1010" />
+    </state>
+    <state width="1637" height="271" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1612513522902" />
+    <state x="461" y="165" key="SettingsEditor" timestamp="1612516273566">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1612516273566" />
+    <state x="1335" y="184" width="585" height="801" key="find.popup" timestamp="1612513728431">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1335" y="184" width="585" height="801" key="find.popup/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1612513728431" />
+    <state x="567" y="240" width="768" height="698" key="run.anything.popup" timestamp="1612515232238">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="567" y="240" width="768" height="698" key="run.anything.popup/0.0.1920.1040/1920.0.1680.1010@0.0.1920.1040" timestamp="1612515232238" />
+    <state x="2416" y="233" width="672" height="677" key="run.anything.popup/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1612513501317" />
+    <state x="2423" y="217" width="672" height="678" key="search.everywhere.popup" timestamp="1612515598753">
+      <screen x="1920" y="0" width="1680" height="1010" />
+    </state>
+    <state x="2423" y="217" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1680.1010@1920.0.1680.1010" timestamp="1612515598753" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/My_Application_2$helloWorld.ic" NAME="helloWorld Coverage Results" MODIFIED="1612513254855" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.example.myapplication2.*</FILTER>
+    </SUITE>
+  </component>
+</project>
