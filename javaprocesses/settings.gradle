@@ -1,3 +1,0 @@
-include ':asd'
-include ':app'
-rootProject.name = "java  processes"
