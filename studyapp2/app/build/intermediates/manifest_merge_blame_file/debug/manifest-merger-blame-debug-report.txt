@@ -1,0 +1,109 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.studyapp"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="23"
+8-->C:\Users\Adrian Cruz\AndroidStudioProjects\studyapp2\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="30" />
+9-->C:\Users\Adrian Cruz\AndroidStudioProjects\studyapp2\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->C:\Users\Adrian Cruz\AndroidStudioProjects\studyapp2\app\src\main\AndroidManifest.xml:6:5-67
+11-->C:\Users\Adrian Cruz\AndroidStudioProjects\studyapp2\app\src\main\AndroidManifest.xml:6:22-64
+12
+13    <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
+14    <!-- <uses-sdk android:minSdkVersion="14" /> -->
+15    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+15-->[com.google.firebase:firebase-firestore:23.0.2] C:\Users\Adrian Cruz\.gradle\caches\transforms-2\files-2.1\0da01bd7c2ebd4152f9e2f019e9acf1f\firebase-firestore-23.0.2\AndroidManifest.xml:13:5-79
+15-->[com.google.firebase:firebase-firestore:23.0.2] C:\Users\Adrian Cruz\.gradle\caches\transforms-2\files-2.1\0da01bd7c2ebd4152f9e2f019e9acf1f\firebase-firestore-23.0.2\AndroidManifest.xml:13:22-76
+16
+17    <application
+17-->C:\Users\Adrian Cruz\AndroidStudioProjects\studyapp2\app\src\main\AndroidManifest.xml:8:5-25:19
+18        android:allowBackup="true"
+18-->C:\Users\Adrian Cruz\AndroidStudioProjects\studyapp2\app\src\main\AndroidManifest.xml:9:9-35
+19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+19-->[androidx.core:core:1.5.0] C:\Users\Adrian Cruz\.gradle\caches\transforms-2\files-2.1\de4504a44ff1c2eebbafc7766d076565\core-1.5.0\AndroidManifest.xml:24:18-86
+20        android:debuggable="true"
+21        android:extractNativeLibs="false"
+22        android:icon="@mipmap/ic_launcher"
+22-->C:\Users\Adrian Cruz\AndroidStudioProjects\studyapp2\app\src\main\AndroidManifest.xml:10:9-43
+23        android:label="@string/app_name"
+23-->C:\Users\Adrian Cruz\AndroidStudioProjects\studyapp2\app\src\main\AndroidManifest.xml:11:9-41
+24        android:roundIcon="@mipmap/ic_launcher_round"
+24-->C:\Users\Adrian Cruz\AndroidStudioProjects\studyapp2\app\src\main\AndroidManifest.xml:12:9-54
+25        android:supportsRtl="true"
+25-->C:\Users\Adrian Cruz\AndroidStudioProjects\studyapp2\app\src\main\AndroidManifest.xml:13:9-35
+26        android:testOnly="true"
+27        android:theme="@style/Theme.Studyapp" >
+27-->C:\Users\Adrian Cruz\AndroidStudioProjects\studyapp2\app\src\main\AndroidManifest.xml:14:9-46
+28        <activity
+28-->C:\Users\Adrian Cruz\AndroidStudioProjects\studyapp2\app\src\main\AndroidManifest.xml:15:9-17:56
+29            android:name="com.example.studyapp.HomeScreen"
+29-->C:\Users\Adrian Cruz\AndroidStudioProjects\studyapp2\app\src\main\AndroidManifest.xml:15:19-45
+30            android:screenOrientation="portrait" />
+30-->C:\Users\Adrian Cruz\AndroidStudioProjects\studyapp2\app\src\main\AndroidManifest.xml:16:13-49
+31        <activity android:name="com.example.studyapp.MainActivity" >
+31-->C:\Users\Adrian Cruz\AndroidStudioProjects\studyapp2\app\src\main\AndroidManifest.xml:18:9-24:20
+31-->C:\Users\Adrian Cruz\AndroidStudioProjects\studyapp2\app\src\main\AndroidManifest.xml:18:19-47
+32            <intent-filter>
+32-->C:\Users\Adrian Cruz\AndroidStudioProjects\studyapp2\app\src\main\AndroidManifest.xml:19:13-23:29
+33                <action android:name="android.intent.action.MAIN" />
+33-->C:\Users\Adrian Cruz\AndroidStudioProjects\studyapp2\app\src\main\AndroidManifest.xml:20:17-69
+33-->C:\Users\Adrian Cruz\AndroidStudioProjects\studyapp2\app\src\main\AndroidManifest.xml:20:25-66
+34
+35                <category android:name="android.intent.category.LAUNCHER" />
+35-->C:\Users\Adrian Cruz\AndroidStudioProjects\studyapp2\app\src\main\AndroidManifest.xml:22:17-77
+35-->C:\Users\Adrian Cruz\AndroidStudioProjects\studyapp2\app\src\main\AndroidManifest.xml:22:27-74
+36            </intent-filter>
+37        </activity>
+38
+39        <service
+39-->[com.google.firebase:firebase-firestore:23.0.2] C:\Users\Adrian Cruz\.gradle\caches\transforms-2\files-2.1\0da01bd7c2ebd4152f9e2f019e9acf1f\firebase-firestore-23.0.2\AndroidManifest.xml:17:9-23:19
+40            android:name="com.google.firebase.components.ComponentDiscoveryService"
+40-->[com.google.firebase:firebase-firestore:23.0.2] C:\Users\Adrian Cruz\.gradle\caches\transforms-2\files-2.1\0da01bd7c2ebd4152f9e2f019e9acf1f\firebase-firestore-23.0.2\AndroidManifest.xml:18:13-84
+41            android:directBootAware="true"
+41-->[com.google.firebase:firebase-common:20.0.0] C:\Users\Adrian Cruz\.gradle\caches\transforms-2\files-2.1\ef8b0316f80304d8bf2f413ed9f71732\firebase-common-20.0.0\AndroidManifest.xml:35:13-43
+42            android:exported="false" >
+42-->[com.google.firebase:firebase-firestore:23.0.2] C:\Users\Adrian Cruz\.gradle\caches\transforms-2\files-2.1\0da01bd7c2ebd4152f9e2f019e9acf1f\firebase-firestore-23.0.2\AndroidManifest.xml:19:13-37
+43            <meta-data
+43-->[com.google.firebase:firebase-firestore:23.0.2] C:\Users\Adrian Cruz\.gradle\caches\transforms-2\files-2.1\0da01bd7c2ebd4152f9e2f019e9acf1f\firebase-firestore-23.0.2\AndroidManifest.xml:20:13-22:85
+44                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
+44-->[com.google.firebase:firebase-firestore:23.0.2] C:\Users\Adrian Cruz\.gradle\caches\transforms-2\files-2.1\0da01bd7c2ebd4152f9e2f019e9acf1f\firebase-firestore-23.0.2\AndroidManifest.xml:21:17-111
+45                android:value="com.google.firebase.components.ComponentRegistrar" />
+45-->[com.google.firebase:firebase-firestore:23.0.2] C:\Users\Adrian Cruz\.gradle\caches\transforms-2\files-2.1\0da01bd7c2ebd4152f9e2f019e9acf1f\firebase-firestore-23.0.2\AndroidManifest.xml:22:17-82
+46        </service>
+47
+48        <activity
+48-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Adrian Cruz\.gradle\caches\transforms-2\files-2.1\777cb013c1c7400255fd4d9936cd5d9e\play-services-base-17.0.0\AndroidManifest.xml:23:9-26:75
+49            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+49-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Adrian Cruz\.gradle\caches\transforms-2\files-2.1\777cb013c1c7400255fd4d9936cd5d9e\play-services-base-17.0.0\AndroidManifest.xml:24:13-79
+50            android:exported="false"
+50-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Adrian Cruz\.gradle\caches\transforms-2\files-2.1\777cb013c1c7400255fd4d9936cd5d9e\play-services-base-17.0.0\AndroidManifest.xml:25:13-37
+51            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+51-->[com.google.android.gms:play-services-base:17.0.0] C:\Users\Adrian Cruz\.gradle\caches\transforms-2\files-2.1\777cb013c1c7400255fd4d9936cd5d9e\play-services-base-17.0.0\AndroidManifest.xml:26:13-72
+52
+53        <provider
+53-->[com.google.firebase:firebase-common:20.0.0] C:\Users\Adrian Cruz\.gradle\caches\transforms-2\files-2.1\ef8b0316f80304d8bf2f413ed9f71732\firebase-common-20.0.0\AndroidManifest.xml:26:9-31:39
+54            android:name="com.google.firebase.provider.FirebaseInitProvider"
+54-->[com.google.firebase:firebase-common:20.0.0] C:\Users\Adrian Cruz\.gradle\caches\transforms-2\files-2.1\ef8b0316f80304d8bf2f413ed9f71732\firebase-common-20.0.0\AndroidManifest.xml:27:13-77
+55            android:authorities="com.example.studyapp.firebaseinitprovider"
+55-->[com.google.firebase:firebase-common:20.0.0] C:\Users\Adrian Cruz\.gradle\caches\transforms-2\files-2.1\ef8b0316f80304d8bf2f413ed9f71732\firebase-common-20.0.0\AndroidManifest.xml:28:13-72
+56            android:directBootAware="true"
+56-->[com.google.firebase:firebase-common:20.0.0] C:\Users\Adrian Cruz\.gradle\caches\transforms-2\files-2.1\ef8b0316f80304d8bf2f413ed9f71732\firebase-common-20.0.0\AndroidManifest.xml:29:13-43
+57            android:exported="false"
+57-->[com.google.firebase:firebase-common:20.0.0] C:\Users\Adrian Cruz\.gradle\caches\transforms-2\files-2.1\ef8b0316f80304d8bf2f413ed9f71732\firebase-common-20.0.0\AndroidManifest.xml:30:13-37
+58            android:initOrder="100" />
+58-->[com.google.firebase:firebase-common:20.0.0] C:\Users\Adrian Cruz\.gradle\caches\transforms-2\files-2.1\ef8b0316f80304d8bf2f413ed9f71732\firebase-common-20.0.0\AndroidManifest.xml:31:13-36
+59
+60        <meta-data
+60-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Adrian Cruz\.gradle\caches\transforms-2\files-2.1\aed216302ec19ecbea96c44ee84be4c9\play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
+61            android:name="com.google.android.gms.version"
+61-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Adrian Cruz\.gradle\caches\transforms-2\files-2.1\aed216302ec19ecbea96c44ee84be4c9\play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
+62            android:value="@integer/google_play_services_version" />
+62-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\Adrian Cruz\.gradle\caches\transforms-2\files-2.1\aed216302ec19ecbea96c44ee84be4c9\play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
+63    </application>
+64
+65</manifest>
