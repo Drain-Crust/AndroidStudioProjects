@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+
     android:layout_width="170dp"
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
@@ -25,6 +26,11 @@
             android:text="Name"
             android:textColor="@color/black"
             android:textSize="15sp" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layouts"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 </androidx.cardview.widget.CardView>

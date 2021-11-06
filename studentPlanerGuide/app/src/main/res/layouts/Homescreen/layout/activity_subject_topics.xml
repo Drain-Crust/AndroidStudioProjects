@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="15dp"
-    tools:context=".mainPages.SubjectTopicsActivity">
+    tools:context=".mainPages.SubjectTopicsActivity"
+    android:transitionName="shared_layout">
 
     <RelativeLayout
         android:id="@+id/headers"
@@ -25,7 +26,8 @@
             android:layout_marginBottom="9dp"
             android:gravity="bottom"
             android:text="sampletext"
-            android:textSize="30sp" />
+            android:textSize="30sp"
+            android:transitionName="shared_name"/>
 
 
     </RelativeLayout>
