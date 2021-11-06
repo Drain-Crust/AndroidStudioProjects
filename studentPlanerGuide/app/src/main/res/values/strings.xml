@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">studentPlanerGuide</string>
+    <string name="lets_get_started">Lets Get Started</string>
+    <string name="skip">SKIP</string>
+    <string name="search">Search</string>
+    <string name="subjects">Subjects</string>
+    <string name="subjectsTitle">Subjects</string>
+    <string name="trainingTitle">training</string>
+    <string name="tasksTitle">tasks</string>
+    <string name="statsTitle">stats</string>
+</resources>

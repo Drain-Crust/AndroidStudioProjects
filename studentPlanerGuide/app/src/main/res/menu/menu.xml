@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/subjectsOption"
+        android:title="@string/subjectsTitle"
+        android:icon="@drawable/openbook"/>
+    <item
+        android:id="@+id/rememberingOption"
+        android:title="@string/trainingTitle"
+        android:icon="@drawable/remember"/>
+    <item
+        android:id="@+id/taskListOption"
+        android:title="@string/tasksTitle"
+        android:icon="@drawable/list"/>
+    <item
+        android:id="@+id/statsOption"
+        android:title="@string/statsTitle"
+        android:icon="@drawable/barchart"/>
+
+</menu>
