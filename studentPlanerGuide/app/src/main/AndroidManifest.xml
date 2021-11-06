@@ -9,11 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.StudentPlanerGuide">
-        <activity android:name=".mainPages.subjects.SkillsActivity"></activity>
+        <activity android:name=".FlashcardsActivity"></activity>
+        <activity android:name=".QuestionsActivity" />
+        <activity android:name=".ReadingActivity" />
+        <activity android:name=".mainPages.taskListing.taskListerActivity" />
+        <activity android:name=".mainPages.quizer.reminderActivity" />
+        <activity android:name=".mainPages.stats.statsActivity" />
+        <activity android:name=".mainPages.subjects.PracticeSkillsActivity" />
+        <activity android:name=".mainPages.subjects.SkillsActivity" />
         <activity android:name=".mainPages.subjects.SubjectTopicsActivity" />
         <activity android:name=".mainPages.subjects.HomescreenActivity" />
-        <activity android:name=".mainPages.subjects.OnboardingActivity" />
-        <activity android:name=".mainPages.subjects.MainActivity">
+        <activity android:name=".startingScreens.OnboardingActivity" />
+        <activity android:name=".startingScreens.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

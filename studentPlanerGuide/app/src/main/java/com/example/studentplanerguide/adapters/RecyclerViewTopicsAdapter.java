@@ -24,6 +24,7 @@ public class RecyclerViewTopicsAdapter extends RecyclerView.Adapter<RecyclerView
     private final Context CONTEXT;
     public static final String EXTRA_ID = "ID";
     public static final String EXTRA_NAME = "name";
+    public static final String EXTRA_LOCATION = "location";
 
     public RecyclerViewTopicsAdapter(Context context, List<tasksList> tasksListList){
         this.CONTEXT = context;
@@ -64,6 +65,7 @@ public class RecyclerViewTopicsAdapter extends RecyclerView.Adapter<RecyclerView
             Intent toSkills = new Intent(CONTEXT, SkillsActivity.class);
             toSkills.putExtra(EXTRA_ID, tasksCurrent.getmIds());
             toSkills.putExtra(EXTRA_NAME, tasksCurrent.getmName());
+            toSkills.putExtra(EXTRA_LOCATION, tasksCurrent.getmLocation()+tasksCurrent.getmIds());
             CONTEXT.startActivity(toSkills);
         });
     }

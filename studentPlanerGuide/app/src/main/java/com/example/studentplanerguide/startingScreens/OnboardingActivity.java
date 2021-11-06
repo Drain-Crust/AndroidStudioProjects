@@ -1,4 +1,4 @@
-package com.example.studentplanerguide.mainPages.subjects;
+package com.example.studentplanerguide.startingScreens;
 
 import androidx.appcompat.app.AppCompatActivity;
 

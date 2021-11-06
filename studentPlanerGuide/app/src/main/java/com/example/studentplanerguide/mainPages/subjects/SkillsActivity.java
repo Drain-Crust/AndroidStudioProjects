@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.studentplanerguide.Data.skillsList;
 import com.example.studentplanerguide.R;
 import com.example.studentplanerguide.adapters.RecyclerViewSkillsAdapter;
-import com.example.studentplanerguide.adapters.RecyclerViewSubjectsAdapter;
+import com.example.studentplanerguide.adapters.RecyclerViewTopicsAdapter;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
@@ -27,17 +27,18 @@ public class SkillsActivity extends AppCompatActivity {
     private TextView textView;
     String subjectname;
     String subjectid;
+    String subjectlocation;
 
     private List<skillsList> skillsLists;
 
     private final FirebaseFirestore firebasefirestore = FirebaseFirestore.getInstance();
-    CollectionReference collectionReference = firebasefirestore.collection("subjects");
 
     private RecyclerView recyclerViewTasks;
     private RecyclerViewSkillsAdapter taskAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Objects.requireNonNull(getSupportActionBar()).hide();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_skills);
 
@@ -45,9 +46,11 @@ public class SkillsActivity extends AppCompatActivity {
         recyclerViewTasks = findViewById(R.id.tasksRecyclerView);
 
         information = getIntent();
-        subjectname = information.getStringExtra(RecyclerViewSubjectsAdapter.EXTRA_NAME);
-        subjectid = information.getStringExtra(RecyclerViewSubjectsAdapter.EXTRA_ID);
+        subjectname = information.getStringExtra(RecyclerViewTopicsAdapter.EXTRA_NAME);
+        subjectid = information.getStringExtra(RecyclerViewTopicsAdapter.EXTRA_ID);
+        subjectlocation = information.getStringExtra(RecyclerViewTopicsAdapter.EXTRA_LOCATION);
         textView.setText(subjectname);
+        System.out.println(subjectlocation);
         initData();
     }
 
@@ -59,11 +62,10 @@ public class SkillsActivity extends AppCompatActivity {
 
     private void initData() {
         skillsLists = new ArrayList<>();
-        collectionReference.document(subjectid).collection(subjectname).get().addOnCompleteListener(task -> {
+        firebasefirestore.collection(subjectlocation + "/" + subjectname).get().addOnCompleteListener(task -> {
             if (task.isSuccessful()) {
-
                 for (QueryDocumentSnapshot document : Objects.requireNonNull(task.getResult())) {
-                    skillsLists.add(new skillsList((String) document.get("name"), document.getId()));
+                    skillsLists.add(new skillsList((String) document.get("name"), subjectlocation +"/"+ subjectname + "/", document.getId()));
                 }
                 Log.d("testingings", skillsLists.toString());
                 initRecyclerView();

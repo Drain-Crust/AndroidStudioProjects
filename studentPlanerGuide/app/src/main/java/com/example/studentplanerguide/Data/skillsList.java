@@ -4,14 +4,24 @@ public class skillsList {
 
     private String mName;
     private String mIds;
+    private String mLocation;
 
     public skillsList() {
         //don't delete needed constructor
     }
 
-    public skillsList(String name, String ids) {
+    public skillsList(String name, String location, String ids) {
         this.mName = name;
         this.mIds = ids;
+        this.mLocation = location;
+    }
+
+    public String getmLocation() {
+        return mLocation;
+    }
+
+    public void setmLocation(String location) {
+        mLocation = location;
     }
 
     public String getmIds() {
@@ -33,6 +43,7 @@ public class skillsList {
     public String toString() {
         return "SkillsList{" + '\'' +
                 "Name='" + mName + '\'' +
+                "location='" + mLocation + '\'' +
                 "ids='" + mIds + '}';
     }
 }

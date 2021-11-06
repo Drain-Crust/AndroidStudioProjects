@@ -1,6 +1,7 @@
 package com.example.studentplanerguide.mainPages.subjects;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -15,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.studentplanerguide.Data.subjectList;
 import com.example.studentplanerguide.R;
 import com.example.studentplanerguide.adapters.RecyclerViewSubjectsAdapter;
+import com.example.studentplanerguide.startingScreens.MainActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -63,7 +65,8 @@ public class HomescreenActivity extends AppCompatActivity {
 
             switch (item.getItemId()) {
                 case R.id.subjectsOption:
-                    System.out.println("hello");
+                    startActivity(new Intent(this, HomescreenActivity.class));
+                    finish();
                     break;
                 case R.id.rememberingOption:
                     System.out.println("hellos");

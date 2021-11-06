@@ -4,10 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ebebeb"
-    android:padding="15dp"
-    android:transitionName="shared_layout"
-    tools:context=".mainPages.subjects.SubjectTopicsActivity">
+    tools:context=".mainPages.subjects.PracticeSkillsActivity"
+    android:layout_margin="8dp">
 
     <RelativeLayout
         android:id="@+id/headers"
@@ -18,7 +16,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/subjectName"
+            android:id="@+id/skillsPracticeName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
@@ -27,14 +25,13 @@
             android:layout_marginBottom="9dp"
             android:gravity="bottom"
             android:text="sampletext"
-            android:textSize="30sp"
-            android:transitionName="shared_name" />
+            android:textSize="30sp" />
 
 
     </RelativeLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/tasksRecyclerView"
+        android:id="@+id/practiceTasksRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -43,4 +40,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/headers"
         app:layout_constraintVertical_bias="1.0" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

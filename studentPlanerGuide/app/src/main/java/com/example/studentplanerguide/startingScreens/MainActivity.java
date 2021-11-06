@@ -1,4 +1,4 @@
-package com.example.studentplanerguide.mainPages.subjects;
+package com.example.studentplanerguide.startingScreens;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,6 +10,7 @@ import android.view.WindowManager;
 import android.widget.VideoView;
 
 import com.example.studentplanerguide.R;
+import com.example.studentplanerguide.mainPages.subjects.HomescreenActivity;
 
 import java.util.Objects;
 

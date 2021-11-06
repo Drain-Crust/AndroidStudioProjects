@@ -4,15 +4,25 @@ public class tasksList {
     private String mName;
     private String mColor;
     private String mIds;
+    private String mLocation;
 
     public tasksList(){
         //needed dont delete
     }
 
-    public tasksList(String name, String color, String ids){
+    public tasksList(String name, String color, String ids, String location){
         this.mName = name;
         this.mColor = color;
         this.mIds = ids;
+        this.mLocation = location;
+    }
+
+    public String getmLocation(){
+        return mLocation;
+    }
+
+    public void setmLocation(String location){
+        mLocation = location;
     }
 
     public String getmIds(){
@@ -43,6 +53,7 @@ public class tasksList {
         return "tasksList{" + '\'' +
                 "Name='" + mName + '\'' +
                 "color='" + mColor + '\''+
-                "ids='" + mIds + '}';
+                "ids='" + mIds + '\'' +
+                "location='" + mLocation + '}';
     }
 }
