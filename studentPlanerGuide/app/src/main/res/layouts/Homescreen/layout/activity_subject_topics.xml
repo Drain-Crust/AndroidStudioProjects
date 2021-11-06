@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="15dp"
-    tools:context=".mainPages.SubjectTopicsActivity"
-    android:transitionName="shared_layout">
+    android:transitionName="shared_layout"
+    tools:context=".mainPages.subjects.SubjectTopicsActivity">
 
     <RelativeLayout
         android:id="@+id/headers"
@@ -17,22 +17,23 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
+            android:id="@+id/skillName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_alignParentBottom="true"
-
             android:layout_marginTop="50dp"
             android:layout_marginBottom="9dp"
             android:gravity="bottom"
             android:text="sampletext"
             android:textSize="30sp"
-            android:transitionName="shared_name"/>
+            android:transitionName="shared_name" />
 
 
     </RelativeLayout>
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/skillRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"

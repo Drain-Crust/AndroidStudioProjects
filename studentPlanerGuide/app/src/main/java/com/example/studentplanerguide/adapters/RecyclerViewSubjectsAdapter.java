@@ -19,15 +19,17 @@ import com.bumptech.glide.Glide;
 import com.example.studentplanerguide.Data.subjectList;
 import com.example.studentplanerguide.R;
 
-import com.example.studentplanerguide.mainPages.SubjectTopicsActivity;
+import com.example.studentplanerguide.mainPages.subjects.SubjectTopicsActivity;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class RecyclerViewSubjectsAdapter extends RecyclerView.Adapter<RecyclerViewSubjectsAdapter.viewHolder> {
 
     public static final String EXTRA_NAME = "name";
+    public static final String EXTRA_ID = "ID";
 
-    private final List<subjectList> SUBJECTLISTLIST;
+    private List<subjectList> SUBJECTLISTLIST;
     private final Context CONTEXT;
 
     public RecyclerViewSubjectsAdapter(Context context, List<subjectList> subjectListList) {
@@ -48,6 +50,11 @@ public class RecyclerViewSubjectsAdapter extends RecyclerView.Adapter<RecyclerVi
         }
     }
 
+    public void filterList(ArrayList<subjectList> filteredList) {
+        SUBJECTLISTLIST = filteredList;
+        notifyDataSetChanged();
+    }
+
     @NonNull
     @Override
     public RecyclerViewSubjectsAdapter.viewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -66,6 +73,7 @@ public class RecyclerViewSubjectsAdapter extends RecyclerView.Adapter<RecyclerVi
         holder.imageView.setOnClickListener(v -> {
             Intent toTopicsScreen = new Intent(CONTEXT, SubjectTopicsActivity.class);
             toTopicsScreen.putExtra(EXTRA_NAME, subjectCurrent.getName());
+            toTopicsScreen.putExtra(EXTRA_ID, subjectCurrent.getIds());
 
             Pair layout = Pair.create(holder.layout,"shared_layout");
             Pair name = Pair.create(holder.textView,"shared_name");

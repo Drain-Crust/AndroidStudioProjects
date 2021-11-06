@@ -9,10 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.StudentPlanerGuide">
-        <activity android:name=".mainPages.SubjectTopicsActivity"></activity>
-        <activity android:name=".mainPages.HomescreenActivity" />
-        <activity android:name=".mainPages.OnboardingActivity" />
-        <activity android:name=".mainPages.MainActivity">
+        <activity android:name=".mainPages.subjects.SkillsActivity"></activity>
+        <activity android:name=".mainPages.subjects.SubjectTopicsActivity" />
+        <activity android:name=".mainPages.subjects.HomescreenActivity" />
+        <activity android:name=".mainPages.subjects.OnboardingActivity" />
+        <activity android:name=".mainPages.subjects.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

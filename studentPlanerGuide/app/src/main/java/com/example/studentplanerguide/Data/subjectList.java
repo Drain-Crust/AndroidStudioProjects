@@ -2,24 +2,34 @@ package com.example.studentplanerguide.Data;
 
 public class subjectList {
 
-    private String mName;
+    private String mIds;
     private String mImageUrl;
+    private String mNames;
 
     public subjectList(){
         //don't delete needed constructor
     }
 
-    public subjectList(String name, String imageUrl){
-        this.mName = name;
+    public subjectList(String ids, String names, String imageUrl){
+        this.mIds = ids;
+        this.mNames = names;
         this.mImageUrl = imageUrl;
     }
 
     public String getName(){
-        return mName;
+        return mNames;
     }
 
     public void setName(String name){
-        mName = name;
+        mNames = name;
+    }
+
+    public String getIds(){
+        return mIds;
+    }
+
+    public void setIds(String ids){
+        mIds = ids;
     }
 
     public String getImageUrl(){
@@ -32,7 +42,8 @@ public class subjectList {
 
     public String toString(){
         return "SubjectsList{"+
-                "Name='" + mName + '\'' +
+                "Ids='" + mIds + '\'' +
+                "Names='" + mNames + '\'' +
                 ", ImageUrl='"+ mImageUrl + '}';
     }
 }
