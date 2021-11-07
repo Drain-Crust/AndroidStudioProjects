@@ -8,8 +8,10 @@ import android.os.Bundle;
 import com.example.studentplanerguide.R;
 import com.example.studentplanerguide.mainPages.stats.statsActivity;
 import com.example.studentplanerguide.mainPages.subjects.HomescreenActivity;
-import com.example.studentplanerguide.mainPages.taskListing.taskListerActivity;
+import com.example.studentplanerguide.mainPages.testDates.taskListerActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+import java.util.Objects;
 
 public class reminderActivity extends AppCompatActivity {
 
@@ -17,6 +19,7 @@ public class reminderActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Objects.requireNonNull(getSupportActionBar()).hide();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reminder);
 

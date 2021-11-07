@@ -9,8 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.StudentPlanerGuide">
+        <activity android:name=".startingScreens.preLoginActivity"></activity>
+        <activity android:name=".mainPages.stats.LoginActivity" />
         <activity android:name=".mainPages.taskTypes.Questions.QuestionsActivity" />
-        <activity android:name=".mainPages.taskListing.taskListerActivity" />
+        <activity android:name=".mainPages.testDates.taskListerActivity" />
         <activity android:name=".mainPages.quizer.reminderActivity" />
         <activity android:name=".mainPages.stats.statsActivity" />
         <activity android:name=".mainPages.subjects.PracticeSkillsActivity" />

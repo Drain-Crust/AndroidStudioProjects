@@ -8,4 +8,5 @@
     <string name="trainingTitle">training</string>
     <string name="tasksTitle">tasks</string>
     <string name="statsTitle">stats</string>
+    <string name="calender">Calender</string>
 </resources>

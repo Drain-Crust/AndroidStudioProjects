@@ -15,7 +15,7 @@ import com.example.studentplanerguide.adapters.RecyclerViewSubjectsAdapter;
 import com.example.studentplanerguide.adapters.RecyclerViewTopicsAdapter;
 import com.example.studentplanerguide.mainPages.quizer.reminderActivity;
 import com.example.studentplanerguide.mainPages.stats.statsActivity;
-import com.example.studentplanerguide.mainPages.taskListing.taskListerActivity;
+import com.example.studentplanerguide.mainPages.testDates.taskListerActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;

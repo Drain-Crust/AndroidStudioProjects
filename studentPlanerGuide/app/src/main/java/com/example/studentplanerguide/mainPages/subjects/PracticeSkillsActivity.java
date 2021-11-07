@@ -10,16 +10,13 @@ import android.util.Log;
 import android.widget.TextView;
 
 import com.example.studentplanerguide.Data.practiceSkillsList;
-import com.example.studentplanerguide.Data.skillsList;
 import com.example.studentplanerguide.R;
 import com.example.studentplanerguide.adapters.RecyclerViewPracticeSkillsAdapter;
 import com.example.studentplanerguide.adapters.RecyclerViewSkillsAdapter;
-import com.example.studentplanerguide.adapters.RecyclerViewTopicsAdapter;
 import com.example.studentplanerguide.mainPages.quizer.reminderActivity;
 import com.example.studentplanerguide.mainPages.stats.statsActivity;
-import com.example.studentplanerguide.mainPages.taskListing.taskListerActivity;
+import com.example.studentplanerguide.mainPages.testDates.taskListerActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 

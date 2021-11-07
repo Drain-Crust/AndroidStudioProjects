@@ -10,10 +10,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d03f772a-d0c6-4d79-a1c0-47a48914e42d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../studentPlanerGuide/app/src/main/java/com/example/studentplanerguide/Data/tasksList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../studentPlanerGuide/app/src/main/java/com/example/studentplanerguide/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/../studentPlanerGuide/app/src/main/java/com/example/studentplanerguide/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../studentPlanerGuide/app/src/main/java/com/example/studentplanerguide/mainPages/HomescreenActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../studentPlanerGuide/app/src/main/java/com/example/studentplanerguide/mainPages/HomescreenActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../studentPlanerGuide/app/src/main/java/com/example/studentplanerguide/mainPages/SubjectTopicsActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../studentPlanerGuide/app/src/main/java/com/example/studentplanerguide/mainPages/SubjectTopicsActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../studentPlanerGuide/app/src/main/java/com/example/studentplanerguide/mainPages/stats/LoginActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../studentPlanerGuide/app/src/main/java/com/example/studentplanerguide/startingScreens/preLoginActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../studentPlanerGuide/app/src/main/res/drawable/calendar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../studentPlanerGuide/app/src/main/res/drawable/calender_icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../studentPlanerGuide/app/src/main/res/layouts/Loginscreen/layout/activity_login.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../studentPlanerGuide/app/src/main/res/layouts/Loginscreen/layout/activity_pre_login.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../studentPlanerGuide/app/src/main/res/layouts/TaskTypes/drawable/settings_icon.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../studentPlanerGuide/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../studentPlanerGuide/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../studentPlanerGuide/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../studentPlanerGuide/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../studentPlanerGuide/app/src/main/java/com/example/studentplanerguide/mainPages/quizer/reminderActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../studentPlanerGuide/app/src/main/java/com/example/studentplanerguide/mainPages/quizer/reminderActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../studentPlanerGuide/app/src/main/java/com/example/studentplanerguide/mainPages/stats/statsActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../studentPlanerGuide/app/src/main/java/com/example/studentplanerguide/mainPages/stats/statsActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../studentPlanerGuide/app/src/main/java/com/example/studentplanerguide/mainPages/subjects/HomescreenActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../studentPlanerGuide/app/src/main/java/com/example/studentplanerguide/mainPages/subjects/HomescreenActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../studentPlanerGuide/app/src/main/java/com/example/studentplanerguide/mainPages/subjects/PracticeSkillsActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../studentPlanerGuide/app/src/main/java/com/example/studentplanerguide/mainPages/subjects/PracticeSkillsActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../studentPlanerGuide/app/src/main/java/com/example/studentplanerguide/mainPages/subjects/SkillsActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../studentPlanerGuide/app/src/main/java/com/example/studentplanerguide/mainPages/subjects/SkillsActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../studentPlanerGuide/app/src/main/java/com/example/studentplanerguide/mainPages/subjects/SubjectTopicsActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../studentPlanerGuide/app/src/main/java/com/example/studentplanerguide/mainPages/subjects/SubjectTopicsActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../studentPlanerGuide/app/src/main/java/com/example/studentplanerguide/mainPages/taskListing/taskListerActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../studentPlanerGuide/app/src/main/java/com/example/studentplanerguide/mainPages/testDates/taskListerActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../studentPlanerGuide/app/src/main/java/com/example/studentplanerguide/mainPages/taskTypes/Questions/QuestionsActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../studentPlanerGuide/app/src/main/java/com/example/studentplanerguide/mainPages/taskTypes/Questions/QuestionsActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../studentPlanerGuide/app/src/main/res/layouts/Statisticsscreen/layout/activity_stats.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../studentPlanerGuide/app/src/main/res/layouts/Statisticsscreen/layout/activity_stats.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../studentPlanerGuide/app/src/main/res/layouts/Tasksscreen/layout/activity_task_lister.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../studentPlanerGuide/app/src/main/res/layouts/Calenderscreen/layout/activity_task_lister.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../studentPlanerGuide/app/src/main/res/menu/menu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../studentPlanerGuide/app/src/main/res/menu/menu.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +53,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="android.sdk.path" value="$PROJECT_DIR$/../../../../android/sdk" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
   </component>
   <component name="RunManager">

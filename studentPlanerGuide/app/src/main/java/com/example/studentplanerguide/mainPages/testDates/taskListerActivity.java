@@ -1,25 +1,22 @@
-package com.example.studentplanerguide.mainPages.subjects;
-
-import android.annotation.SuppressLint;
-import android.content.Intent;
-import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.util.Log;
-import android.widget.EditText;
-import android.widget.Toast;
+package com.example.studentplanerguide.mainPages.testDates;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.os.Bundle;
+import android.util.Log;
+import android.widget.EditText;
+import android.widget.Toast;
+
 import com.example.studentplanerguide.Data.subjectList;
 import com.example.studentplanerguide.R;
-import com.example.studentplanerguide.adapters.CalenderAdapter;
 import com.example.studentplanerguide.adapters.RecyclerViewSubjectsAdapter;
 import com.example.studentplanerguide.mainPages.quizer.reminderActivity;
 import com.example.studentplanerguide.mainPages.stats.statsActivity;
-import com.example.studentplanerguide.mainPages.testDates.taskListerActivity;
+import com.example.studentplanerguide.mainPages.subjects.HomescreenActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -30,13 +27,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class HomescreenActivity extends AppCompatActivity {
+public class taskListerActivity extends AppCompatActivity {
+    BottomNavigationView bottomNavigationView;
 
-    private List<subjectList> subjectListList;
+    private List<subjectList> subjectListLists;
+
 
     RecyclerView recyclerSubjectView;
-    CalenderAdapter subjectAdapter;
-    BottomNavigationView bottomNavigationView;
+    RecyclerViewSubjectsAdapter subjectAdapter;
     EditText searchBars;
 
     public int size;
@@ -56,7 +54,7 @@ public class HomescreenActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         Objects.requireNonNull(getSupportActionBar()).hide();
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_homescreen);
+        setContentView(R.layout.activity_task_lister);
 
         recyclerSubjectView = findViewById(R.id.diffSubjects);
         searchBars = findViewById(R.id.searchBars);
@@ -64,7 +62,7 @@ public class HomescreenActivity extends AppCompatActivity {
         numberOfDocuments();
 
         bottomNavigationView = findViewById(R.id.bottomNavigation);
-        bottomNavigationView.setSelectedItemId(R.id.subjectsOption);
+        bottomNavigationView.setSelectedItemId(R.id.taskListOption);
         bottomNavigationView.setOnItemSelectedListener(item -> {
 
             switch (item.getItemId()) {
@@ -87,41 +85,10 @@ public class HomescreenActivity extends AppCompatActivity {
             }
             return true;
         });
-
-        searchBars.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-                filter(s.toString());
-            }
-        });
-    }
-
-    private void filter(String text) {
-        ArrayList<subjectList> filteredList = new ArrayList<>();
-        //for loop to check through all the items inside the original arraylist
-        for (subjectList item : subjectListList) {
-
-            //adds the item to the new arraylist
-            if (item.getName().toLowerCase().contains(text.toLowerCase())) {
-                filteredList.add(item);
-            }
-        }
-        //applies the new filtered list to the adapter.
-        subjectAdapter.filterList(filteredList);
     }
 
     private void initRecyclerView() {
-        subjectAdapter = new CalenderAdapter(this, subjectListList);
+        subjectAdapter = new RecyclerViewSubjectsAdapter(this, subjectListLists);
         recyclerSubjectView.setHasFixedSize(true);
         recyclerSubjectView.setLayoutManager(new GridLayoutManager(this, 2));
         recyclerSubjectView.setAdapter(subjectAdapter);
@@ -145,7 +112,7 @@ public class HomescreenActivity extends AppCompatActivity {
     }
 
     private void initData() {
-        subjectListList = new ArrayList<>();
+        subjectListLists = new ArrayList<>();
         for (int i = 0 ; i< size;i++){
             z = i;
             collectionReference.document("subject_0"+ (i+1)).get()
@@ -158,7 +125,7 @@ public class HomescreenActivity extends AppCompatActivity {
                             assert image != null;
                             storageReference.child(image).getDownloadUrl().addOnSuccessListener(uri -> {
                                 String url = uri.toString();
-                                subjectListList.add(new subjectList(ids, name, url));
+                                subjectListLists.add(new subjectList(ids, name, url));
                                 Log.d("TAG", z +" "+size + "");
                                 if(z == size-1){
                                     initRecyclerView();

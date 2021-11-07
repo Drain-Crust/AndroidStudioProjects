@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".mainPages.subjects.HomescreenActivity"
+    tools:context=".mainPages.testDates.taskListerActivity"
     android:padding="15dp"
     android:background="#ebebeb">
 
@@ -24,7 +24,7 @@
             android:layout_marginTop="0dp"
             android:layout_marginBottom="55dp"
             android:gravity="left"
-            android:text="@string/calender"
+            android:text="@string/subjects"
             android:textSize="30sp"
             tools:ignore="RtlHardcoded" />
 
@@ -73,8 +73,5 @@
             app:menu="@menu/menu"/>
 
     </androidx.cardview.widget.CardView>
-
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

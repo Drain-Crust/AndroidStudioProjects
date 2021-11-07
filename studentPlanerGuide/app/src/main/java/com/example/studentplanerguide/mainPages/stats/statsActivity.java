@@ -1,24 +1,37 @@
 package com.example.studentplanerguide.mainPages.stats;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ImageView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.studentplanerguide.R;
 import com.example.studentplanerguide.mainPages.quizer.reminderActivity;
 import com.example.studentplanerguide.mainPages.subjects.HomescreenActivity;
-import com.example.studentplanerguide.mainPages.taskListing.taskListerActivity;
+import com.example.studentplanerguide.mainPages.testDates.taskListerActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+import java.util.Objects;
 
 public class statsActivity extends AppCompatActivity {
 
     BottomNavigationView bottomNavigationView;
+    ImageView imageView;
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Objects.requireNonNull(getSupportActionBar()).hide();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stats);
+
+        imageView = findViewById(R.id.settings);
+        imageView.setOnClickListener(v -> {
+            startActivity(new Intent(statsActivity.this, LoginActivity.class));
+            finish();
+        });
 
         bottomNavigationView = findViewById(R.id.bottomNavigation);
         bottomNavigationView.setSelectedItemId(R.id.statsOption);
