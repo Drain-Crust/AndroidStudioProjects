@@ -13,7 +13,6 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.studentplanerguide.Data.practiceSkillsList;
-import com.example.studentplanerguide.Data.skillsList;
 import com.example.studentplanerguide.R;
 
 import java.util.List;

@@ -1,21 +1,22 @@
 package com.example.studentplanerguide.mainPages.testDates;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.example.studentplanerguide.Data.subjectList;
 import com.example.studentplanerguide.R;
-import com.example.studentplanerguide.adapters.RecyclerViewSubjectsAdapter;
+import com.example.studentplanerguide.adapters.CalenderAdapter;
 import com.example.studentplanerguide.mainPages.quizer.reminderActivity;
-import com.example.studentplanerguide.mainPages.stats.statsActivity;
 import com.example.studentplanerguide.mainPages.subjects.HomescreenActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.firestore.CollectionReference;
@@ -34,7 +35,7 @@ public class taskListerActivity extends AppCompatActivity {
 
 
     RecyclerView recyclerSubjectView;
-    RecyclerViewSubjectsAdapter subjectAdapter;
+    CalenderAdapter subjectAdapter;
     EditText searchBars;
 
     public int size;
@@ -74,10 +75,6 @@ public class taskListerActivity extends AppCompatActivity {
                     startActivity(new Intent(this, reminderActivity.class));
                     finish();
                     break;
-                case R.id.statsOption:
-                    startActivity(new Intent(this, statsActivity.class));
-                    finish();
-                    break;
                 case R.id.taskListOption:
                     startActivity(new Intent(this, taskListerActivity.class));
                     finish();
@@ -85,16 +82,33 @@ public class taskListerActivity extends AppCompatActivity {
             }
             return true;
         });
+
+        searchBars.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                filter(s.toString());
+            }
+        });
     }
 
     private void initRecyclerView() {
-        subjectAdapter = new RecyclerViewSubjectsAdapter(this, subjectListLists);
+        subjectAdapter = new CalenderAdapter(this, subjectListLists);
         recyclerSubjectView.setHasFixedSize(true);
         recyclerSubjectView.setLayoutManager(new GridLayoutManager(this, 2));
         recyclerSubjectView.setAdapter(subjectAdapter);
     }
 
-    public void numberOfDocuments(){
+    public void numberOfDocuments() {
         firebasefirestore.collection("subjects").get().addOnCompleteListener(task -> {
             if (task.isSuccessful()) {
                 Log.d("TAG", Objects.requireNonNull(task.getResult()).size() + "");
@@ -107,15 +121,29 @@ public class taskListerActivity extends AppCompatActivity {
 
     }
 
-    public void numberofdocuments(int number){
+    private void filter(String text) {
+        ArrayList<subjectList> filteredList = new ArrayList<>();
+        //for loop to check through all the items inside the original arraylist
+        for (subjectList item : subjectListLists) {
+
+            //adds the item to the new arraylist
+            if (item.getName().toLowerCase().contains(text.toLowerCase())) {
+                filteredList.add(item);
+            }
+        }
+        //applies the new filtered list to the adapter.
+        subjectAdapter.filterList(filteredList);
+    }
+
+    public void numberofdocuments(int number) {
         size = number;
     }
 
     private void initData() {
         subjectListLists = new ArrayList<>();
-        for (int i = 0 ; i< size;i++){
+        for (int i = 0; i < size; i++) {
             z = i;
-            collectionReference.document("subject_0"+ (i+1)).get()
+            collectionReference.document("subject_0" + (i + 1)).get()
                     .addOnSuccessListener(documentSnapshot -> {
                         if (documentSnapshot.exists()) {
                             String name = documentSnapshot.getString(KEY_TITLE);
@@ -126,8 +154,8 @@ public class taskListerActivity extends AppCompatActivity {
                             storageReference.child(image).getDownloadUrl().addOnSuccessListener(uri -> {
                                 String url = uri.toString();
                                 subjectListLists.add(new subjectList(ids, name, url));
-                                Log.d("TAG", z +" "+size + "");
-                                if(z == size-1){
+                                Log.d("TAG", z + " " + size + "");
+                                if (z == size - 1) {
                                     initRecyclerView();
                                 }
                             }).addOnFailureListener(exception -> Toast.makeText(this, "Image Error!", Toast.LENGTH_SHORT).show());

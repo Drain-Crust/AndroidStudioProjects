@@ -13,9 +13,4 @@
         android:id="@+id/taskListOption"
         android:title="@string/tasksTitle"
         android:icon="@drawable/calendar"/>
-    <item
-        android:id="@+id/statsOption"
-        android:title="@string/statsTitle"
-        android:icon="@drawable/barchart"/>
-
 </menu>

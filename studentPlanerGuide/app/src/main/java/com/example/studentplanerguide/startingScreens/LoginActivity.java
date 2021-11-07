@@ -1,14 +1,14 @@
-package com.example.studentplanerguide.mainPages.stats;
-
-import androidx.activity.result.ActivityResultLauncher;
-import androidx.activity.result.contract.ActivityResultContracts;
-import androidx.appcompat.app.AppCompatActivity;
+package com.example.studentplanerguide.startingScreens;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
+
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.studentplanerguide.R;
 import com.example.studentplanerguide.mainPages.subjects.HomescreenActivity;
@@ -23,13 +23,19 @@ import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
 
 public class LoginActivity extends AppCompatActivity {
     private static final String TAG = "good";
 
-    private SignInButton signInButton;
     private FirebaseAuth firebaseAuth;
     public GoogleSignInClient googleSignInClient;
+    private final FirebaseFirestore firebasefirestore = FirebaseFirestore.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -84,9 +90,22 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void updateUI(FirebaseUser account) {
+        String getEmail = account.getEmail();
         if (account != null) {
             Toast.makeText(this, "Signed In successfully", Toast.LENGTH_LONG).show();
-            startActivity(new Intent(this, HomescreenActivity.class));
+            DocumentReference docRef = firebasefirestore.collection("items").document(getEmail);
+            docRef.addSnapshotListener((value, error) -> {
+                if (value.exists()) {
+                    //update
+                    startActivity(new Intent(this, HomescreenActivity.class));
+                } else {
+                    //Insert
+                    Map<String, Object> UserEmail = new HashMap<>();
+                    UserEmail.put("email",getEmail);
+                    firebasefirestore.collection("users").document(getEmail).set(UserEmail);
+                    startActivity(new Intent(this, HomescreenActivity.class));
+                }
+            });
 
         } else {
             Toast.makeText(this, "Failed To Sign In", Toast.LENGTH_LONG).show();

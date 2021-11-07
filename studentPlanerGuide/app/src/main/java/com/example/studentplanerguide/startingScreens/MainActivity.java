@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
             if(isFinishing())
                 return;
 
-            startActivity(new Intent(MainActivity.this, HomescreenActivity.class));
+            startActivity(new Intent(MainActivity.this, LoginActivity.class));
             finish();
         });
         videoView.start();

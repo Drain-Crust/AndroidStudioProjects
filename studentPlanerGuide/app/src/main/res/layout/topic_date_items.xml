@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/skillLayout"
+    app:cardCornerRadius="6dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/taskSkill"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:padding="15dp"
+        android:text="sampletext"
+        android:textSize="17sp" />
+
+    <EditText
+        android:id="@+id/dateGiven"
+        android:layout_width="158dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:autofillHints=" "
+        android:inputType="date" />
+
+</androidx.cardview.widget.CardView>

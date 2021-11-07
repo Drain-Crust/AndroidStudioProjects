@@ -15,10 +15,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.studentplanerguide.Data.subjectList;
 import com.example.studentplanerguide.R;
-import com.example.studentplanerguide.adapters.CalenderAdapter;
 import com.example.studentplanerguide.adapters.RecyclerViewSubjectsAdapter;
 import com.example.studentplanerguide.mainPages.quizer.reminderActivity;
-import com.example.studentplanerguide.mainPages.stats.statsActivity;
 import com.example.studentplanerguide.mainPages.testDates.taskListerActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.firestore.CollectionReference;
@@ -35,7 +33,7 @@ public class HomescreenActivity extends AppCompatActivity {
     private List<subjectList> subjectListList;
 
     RecyclerView recyclerSubjectView;
-    CalenderAdapter subjectAdapter;
+    RecyclerViewSubjectsAdapter subjectAdapter;
     BottomNavigationView bottomNavigationView;
     EditText searchBars;
 
@@ -74,10 +72,6 @@ public class HomescreenActivity extends AppCompatActivity {
                     break;
                 case R.id.rememberingOption:
                     startActivity(new Intent(this, reminderActivity.class));
-                    finish();
-                    break;
-                case R.id.statsOption:
-                    startActivity(new Intent(this, statsActivity.class));
                     finish();
                     break;
                 case R.id.taskListOption:
@@ -121,7 +115,7 @@ public class HomescreenActivity extends AppCompatActivity {
     }
 
     private void initRecyclerView() {
-        subjectAdapter = new CalenderAdapter(this, subjectListList);
+        subjectAdapter = new RecyclerViewSubjectsAdapter(this, subjectListList);
         recyclerSubjectView.setHasFixedSize(true);
         recyclerSubjectView.setLayoutManager(new GridLayoutManager(this, 2));
         recyclerSubjectView.setAdapter(subjectAdapter);

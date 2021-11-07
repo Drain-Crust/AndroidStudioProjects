@@ -7,7 +7,6 @@ import android.os.Bundle;
 
 import com.example.studentplanerguide.R;
 import com.example.studentplanerguide.mainPages.quizer.reminderActivity;
-import com.example.studentplanerguide.mainPages.stats.statsActivity;
 import com.example.studentplanerguide.mainPages.subjects.HomescreenActivity;
 import com.example.studentplanerguide.mainPages.testDates.taskListerActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -34,10 +33,6 @@ public class QuestionsActivity extends AppCompatActivity {
                     break;
                 case R.id.rememberingOption:
                     startActivity(new Intent(this, reminderActivity.class));
-                    finish();
-                    break;
-                case R.id.statsOption:
-                    startActivity(new Intent(this, statsActivity.class));
                     finish();
                     break;
                 case R.id.taskListOption:
