@@ -41,6 +41,7 @@ public class SubjectTopicDates extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Objects.requireNonNull(getSupportActionBar()).hide();
         setContentView(R.layout.activity_subject_topic_dates);
 
         recyclerViewTasks = findViewById(R.id.calenderRecyclerView);

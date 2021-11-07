@@ -24,6 +24,7 @@
         android:layout_height="match_parent"
         android:layout_gravity="end"
         android:autofillHints=" "
-        android:inputType="date" />
+        android:hint="@string/date_format"
+        android:inputType="datetime" />
 
 </androidx.cardview.widget.CardView>

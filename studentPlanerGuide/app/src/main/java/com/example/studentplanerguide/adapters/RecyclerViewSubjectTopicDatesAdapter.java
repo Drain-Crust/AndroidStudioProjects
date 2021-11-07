@@ -5,16 +5,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.studentplanerguide.Data.subjectList;
 import com.example.studentplanerguide.Data.tasksList;
+import com.example.studentplanerguide.Data.DateTextUpdater;
 import com.example.studentplanerguide.R;
 
 import java.util.List;
@@ -52,6 +50,7 @@ public class RecyclerViewSubjectTopicDatesAdapter extends RecyclerView.Adapter<R
     public void onBindViewHolder(@NonNull RecyclerViewSubjectTopicDatesAdapter.viewHolder holder, int position) {
         tasksList subjectCurrent = tasksListList.get(position);
         holder.textView.setText(subjectCurrent.getmName());
+        holder.editText.addTextChangedListener(new DateTextUpdater());
     }
 
     @Override
