@@ -13,6 +13,10 @@ import com.example.studentplanerguide.Data.tasksList;
 import com.example.studentplanerguide.R;
 import com.example.studentplanerguide.adapters.RecyclerViewSubjectsAdapter;
 import com.example.studentplanerguide.adapters.RecyclerViewTopicsAdapter;
+import com.example.studentplanerguide.mainPages.quizer.reminderActivity;
+import com.example.studentplanerguide.mainPages.stats.statsActivity;
+import com.example.studentplanerguide.mainPages.taskListing.taskListerActivity;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
@@ -29,6 +33,7 @@ public class SubjectTopicsActivity extends AppCompatActivity {
     String subjectid;
 
     private List<tasksList> tasksListList;
+    BottomNavigationView bottomNavigationView;
 
     private final FirebaseFirestore firebasefirestore = FirebaseFirestore.getInstance();
     CollectionReference collectionReference = firebasefirestore.collection("subjects");
@@ -50,6 +55,30 @@ public class SubjectTopicsActivity extends AppCompatActivity {
         subjectid = information.getStringExtra(RecyclerViewSubjectsAdapter.EXTRA_ID);
         textView.setText(subjectname);
         initData();
+
+        bottomNavigationView = findViewById(R.id.bottomNavigation);
+        bottomNavigationView.setOnItemSelectedListener(item -> {
+
+            switch (item.getItemId()) {
+                case R.id.subjectsOption:
+                    startActivity(new Intent(this, HomescreenActivity.class));
+                    finish();
+                    break;
+                case R.id.rememberingOption:
+                    startActivity(new Intent(this, reminderActivity.class));
+                    finish();
+                    break;
+                case R.id.statsOption:
+                    startActivity(new Intent(this, statsActivity.class));
+                    finish();
+                    break;
+                case R.id.taskListOption:
+                    startActivity(new Intent(this, taskListerActivity.class));
+                    finish();
+                    break;
+            }
+            return true;
+        });
     }
 
     private void initRecyclerView() {

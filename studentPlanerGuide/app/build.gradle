@@ -30,7 +30,7 @@ android {
     sourceSets {
         main {
             res {
-                srcDirs 'src\\main\\res', 'src\\main\\res\\layouts\\Splashscreen', 'src\\main\\res\\layouts\\OnboardingScreen', 'src\\main\\res\\layouts\\Loginscreen', 'src\\main\\res\\layouts\\Homescreen', 'src\\main\\res\\layouts\\AddSubjectscreen', 'src\\main\\res\\layouts\\Tasksscreen', 'src\\main\\res\\layouts\\Calenderscreen', 'src\\main\\res\\layouts\\Statisticsscreen', 'src\\main\\res\\layouts\\Reminder'
+                srcDirs 'src\\main\\res', 'src\\main\\res\\layouts\\Splashscreen', 'src\\main\\res\\layouts\\OnboardingScreen', 'src\\main\\res\\layouts\\Loginscreen', 'src\\main\\res\\layouts\\Homescreen', 'src\\main\\res\\layouts\\AddSubjectscreen', 'src\\main\\res\\layouts\\Tasksscreen', 'src\\main\\res\\layouts\\Calenderscreen', 'src\\main\\res\\layouts\\Statisticsscreen', 'src\\main\\res\\layouts\\Reminder', 'src\\main\\res\\layouts\\TaskTypes'
             }
         }
     }

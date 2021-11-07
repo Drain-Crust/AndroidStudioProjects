@@ -16,6 +16,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.studentplanerguide.Data.subjectList;
 import com.example.studentplanerguide.R;
 import com.example.studentplanerguide.adapters.RecyclerViewSubjectsAdapter;
+import com.example.studentplanerguide.mainPages.quizer.reminderActivity;
+import com.example.studentplanerguide.mainPages.stats.statsActivity;
+import com.example.studentplanerguide.mainPages.taskListing.taskListerActivity;
 import com.example.studentplanerguide.startingScreens.MainActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.firestore.CollectionReference;
@@ -69,13 +72,16 @@ public class HomescreenActivity extends AppCompatActivity {
                     finish();
                     break;
                 case R.id.rememberingOption:
-                    System.out.println("hellos");
+                    startActivity(new Intent(this, reminderActivity.class));
+                    finish();
                     break;
                 case R.id.statsOption:
-                    System.out.println("helloss");
+                    startActivity(new Intent(this, statsActivity.class));
+                    finish();
                     break;
                 case R.id.taskListOption:
-                    System.out.println("hellosss");
+                    startActivity(new Intent(this, taskListerActivity.class));
+                    finish();
                     break;
             }
             return true;

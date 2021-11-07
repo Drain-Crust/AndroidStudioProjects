@@ -13,6 +13,10 @@ import com.example.studentplanerguide.Data.skillsList;
 import com.example.studentplanerguide.R;
 import com.example.studentplanerguide.adapters.RecyclerViewSkillsAdapter;
 import com.example.studentplanerguide.adapters.RecyclerViewTopicsAdapter;
+import com.example.studentplanerguide.mainPages.quizer.reminderActivity;
+import com.example.studentplanerguide.mainPages.stats.statsActivity;
+import com.example.studentplanerguide.mainPages.taskListing.taskListerActivity;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
@@ -28,6 +32,7 @@ public class SkillsActivity extends AppCompatActivity {
     String subjectname;
     String subjectid;
     String subjectlocation;
+    BottomNavigationView bottomNavigationView;
 
     private List<skillsList> skillsLists;
 
@@ -52,6 +57,30 @@ public class SkillsActivity extends AppCompatActivity {
         textView.setText(subjectname);
         System.out.println(subjectlocation);
         initData();
+
+        bottomNavigationView = findViewById(R.id.bottomNavigation);
+        bottomNavigationView.setOnItemSelectedListener(item -> {
+
+            switch (item.getItemId()) {
+                case R.id.subjectsOption:
+                    startActivity(new Intent(this, HomescreenActivity.class));
+                    finish();
+                    break;
+                case R.id.rememberingOption:
+                    startActivity(new Intent(this, reminderActivity.class));
+                    finish();
+                    break;
+                case R.id.statsOption:
+                    startActivity(new Intent(this, statsActivity.class));
+                    finish();
+                    break;
+                case R.id.taskListOption:
+                    startActivity(new Intent(this, taskListerActivity.class));
+                    finish();
+                    break;
+            }
+            return true;
+        });
     }
 
     private void initRecyclerView() {

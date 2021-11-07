@@ -1,4 +1,4 @@
-package com.example.studentplanerguide.mainPages.taskListing;
+package com.example.studentplanerguide.mainPages.taskTypes.Reading;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,15 +9,16 @@ import com.example.studentplanerguide.R;
 import com.example.studentplanerguide.mainPages.quizer.reminderActivity;
 import com.example.studentplanerguide.mainPages.stats.statsActivity;
 import com.example.studentplanerguide.mainPages.subjects.HomescreenActivity;
+import com.example.studentplanerguide.mainPages.taskListing.taskListerActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class taskListerActivity extends AppCompatActivity {
+public class ReadingActivity extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_task_lister);
+        setContentView(R.layout.activity_reading);
 
         bottomNavigationView = findViewById(R.id.bottomNavigation);
         bottomNavigationView.setOnItemSelectedListener(item -> {
