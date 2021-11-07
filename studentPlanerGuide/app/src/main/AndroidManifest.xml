@@ -9,9 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.StudentPlanerGuide">
-        <activity android:name=".mainPages.taskTypes.Flashcards.FlashcardsActivity"></activity>
         <activity android:name=".mainPages.taskTypes.Questions.QuestionsActivity" />
-        <activity android:name=".mainPages.taskTypes.Reading.ReadingActivity" />
         <activity android:name=".mainPages.taskListing.taskListerActivity" />
         <activity android:name=".mainPages.quizer.reminderActivity" />
         <activity android:name=".mainPages.stats.statsActivity" />

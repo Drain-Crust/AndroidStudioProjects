@@ -21,6 +21,7 @@ public class reminderActivity extends AppCompatActivity {
         setContentView(R.layout.activity_reminder);
 
         bottomNavigationView = findViewById(R.id.bottomNavigation);
+        bottomNavigationView.setSelectedItemId(R.id.rememberingOption);
         bottomNavigationView.setOnItemSelectedListener(item -> {
 
             switch (item.getItemId()) {

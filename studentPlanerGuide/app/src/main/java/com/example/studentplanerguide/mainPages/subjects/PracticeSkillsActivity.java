@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
 
+import com.example.studentplanerguide.Data.practiceSkillsList;
 import com.example.studentplanerguide.Data.skillsList;
 import com.example.studentplanerguide.R;
 import com.example.studentplanerguide.adapters.RecyclerViewPracticeSkillsAdapter;
@@ -35,7 +36,7 @@ public class PracticeSkillsActivity extends AppCompatActivity {
     String subjectlocation;
     BottomNavigationView bottomNavigationView;
 
-    private List<skillsList> skillsLists;
+    private List<practiceSkillsList> practiceSkillsListList;
 
     private final FirebaseFirestore firebasefirestore = FirebaseFirestore.getInstance();
 
@@ -60,6 +61,7 @@ public class PracticeSkillsActivity extends AppCompatActivity {
         initData();
 
         bottomNavigationView = findViewById(R.id.bottomNavigation);
+        bottomNavigationView.setSelectedItemId(R.id.subjectsOption);
         bottomNavigationView.setOnItemSelectedListener(item -> {
 
             switch (item.getItemId()) {
@@ -85,19 +87,19 @@ public class PracticeSkillsActivity extends AppCompatActivity {
     }
 
     private void initRecyclerView() {
-        taskAdapter = new RecyclerViewPracticeSkillsAdapter(this, skillsLists);
+        taskAdapter = new RecyclerViewPracticeSkillsAdapter(this, practiceSkillsListList);
         recyclerViewTasks.setLayoutManager(new LinearLayoutManager(this));
         recyclerViewTasks.setAdapter(taskAdapter);
     }
 
     private void initData() {
-        skillsLists = new ArrayList<>();
+        practiceSkillsListList = new ArrayList<>();
         firebasefirestore.collection(subjectlocation + "/" + subjectname).get().addOnCompleteListener(task -> {
             if (task.isSuccessful()) {
                 for (QueryDocumentSnapshot document : Objects.requireNonNull(task.getResult())) {
-                    skillsLists.add(new skillsList((String) document.get("name"), subjectlocation +"/"+ subjectname + "/", document.getId()));
+                    practiceSkillsListList.add(new practiceSkillsList((String) document.get("name"), document.getId(), subjectlocation +"/"+ subjectname + "/", (String) document.get("url")));
                 }
-                Log.d("testingingings", skillsLists.toString());
+                Log.d("testingingings", practiceSkillsListList.toString());
                 initRecyclerView();
             } else {
                 Log.d("testings", "Error getting documents: ", task.getException());

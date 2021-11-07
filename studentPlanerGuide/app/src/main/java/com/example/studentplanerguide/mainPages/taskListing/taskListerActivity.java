@@ -20,6 +20,7 @@ public class taskListerActivity extends AppCompatActivity {
         setContentView(R.layout.activity_task_lister);
 
         bottomNavigationView = findViewById(R.id.bottomNavigation);
+        bottomNavigationView.setSelectedItemId(R.id.taskListOption);
         bottomNavigationView.setOnItemSelectedListener(item -> {
 
             switch (item.getItemId()) {

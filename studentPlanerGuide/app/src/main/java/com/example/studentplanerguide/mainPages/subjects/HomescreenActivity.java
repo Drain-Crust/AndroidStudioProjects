@@ -64,6 +64,7 @@ public class HomescreenActivity extends AppCompatActivity {
         numberOfDocuments();
 
         bottomNavigationView = findViewById(R.id.bottomNavigation);
+        bottomNavigationView.setSelectedItemId(R.id.subjectsOption);
         bottomNavigationView.setOnItemSelectedListener(item -> {
 
             switch (item.getItemId()) {

@@ -21,6 +21,7 @@ public class statsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_stats);
 
         bottomNavigationView = findViewById(R.id.bottomNavigation);
+        bottomNavigationView.setSelectedItemId(R.id.statsOption);
         bottomNavigationView.setOnItemSelectedListener(item -> {
 
             switch (item.getItemId()) {

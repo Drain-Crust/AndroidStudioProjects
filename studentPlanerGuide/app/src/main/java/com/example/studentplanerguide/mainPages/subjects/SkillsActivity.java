@@ -59,6 +59,7 @@ public class SkillsActivity extends AppCompatActivity {
         initData();
 
         bottomNavigationView = findViewById(R.id.bottomNavigation);
+        bottomNavigationView.setSelectedItemId(R.id.subjectsOption);
         bottomNavigationView.setOnItemSelectedListener(item -> {
 
             switch (item.getItemId()) {
